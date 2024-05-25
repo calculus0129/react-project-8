@@ -11,6 +11,25 @@ $ npm install # Ensure all dependencies are installed.
 $ npm run dev # Start the development server
 ```
 
+Hmm...
+
+```bash
+(base) ryanb@Jaehyunui-MacBookPro react-project-8 % npm audit
+# npm audit report
+
+next  >=13.4.0 <14.1.1
+Severity: high
+Next.js Server-Side Request Forgery in Server Actions - https://github.com/advisories/GHSA-fr5h-rqp8-mj6g
+fix available via `npm audit fix --force`
+Will install next@14.2.3, which is outside the stated dependency range
+node_modules/next
+
+1 high severity vulnerability
+
+To address all issues, run:
+  npm audit fix --force
+```
+
 ### Prerequisites
 
 What things you need to install the software and how to install them

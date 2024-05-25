@@ -1,9 +1,24 @@
+import Link from 'next/link'; // 411
+
+import Header from '@/components/header';
+// by NextJS. should use instead of the anchor element for the internal link to your other element.
+
 export default function Home() {
+  console.log('Im a Server Component! Clients can\'t see me! haha');
   return (
     <main>
-      <img src="/logo.png" alt="A server surrounded by magic sparkles." />
-      <h1>Welcome to this NextJS Course!</h1>
+      <Header/>
       <p>🔥 Let&apos;s get started! 🔥</p>
+      <p><Link href="/about">About us</Link></p>
+      <p><Link href="/blog">Blog</Link></p>
     </main>
+    // about us linking is not safe: the refresh btn becomes X a bit.
+    // Left the before page and downloaded another page
+    // We don't use multi-page with react normally. (single-page, instead.)
+    // rendered on the server if URL input
+    // client-side
+    // not leaving, or downloading new page
   );
 }
+
+// 
